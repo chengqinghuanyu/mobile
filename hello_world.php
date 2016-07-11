@@ -1,5 +1,4 @@
 <?php
-
-header("Content-Type: text/html; charset=gb2312");
-echo "你好世界！"
-<?
+header("Content-type:text/html;charset=utf-8"); //不要有空格，这里的输出
+echo "你好世界！";
+?>
