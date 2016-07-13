@@ -156,4 +156,77 @@ if(1){
 	include_once("error.php");
 	include_once("error.php");
 }
+
+
+printf("<br/>");
+$value = pow(5,3);
+echo $value;
+
+printf("<br/>");
+echo pow(5,3);
+
+printf("<br/>");
+
+function generaterFooter(){
+	echo "Copyright 2010 尹鹏孝";
+}
+generaterFooter();
+
+
+printf("<br/>");
+function calcSalesTax($price,$tax){
+	$total = $price+$price*$tax;
+	echo "Total cost is :$total";
+}
+
+
+$pricingtag = 15.00;
+$salestax = .75;
+calcSalesTax($pricingtag, $salestax);
+
+$cost = 20.5;
+$tax = 0.0575;
+function calculateCost(&$cost, $tax){
+	$cost = $cost + $cost*$tax;
+	$tax += 4;
+}
+calculateCost($cost, $tax);
+printf("Tax is %01.2f%%", $tax*100);
+
+printf("Tax is $%01.2f", $cost);
+
+
+function calculateSalesTax($price, $tax=.0675){
+	$total = $price + ($price * $tax);
+	echo "Total cost :$total";
+}
+$price = 15.47;
+calculateSalesTax($price);
+
+function calculateSalesTax1($price, $tax=""){
+	$total = $price + ($price * $tax);
+	echo "Total cost :$total";
+}
+calculateSalesTax1(42);
+printf("<br/>");
+function calculate($price, $price2="",$price3=""){
+	echo $price + $price2 + $price3;
+}
+
+calculate(10, "", 3);
+
+
+$colors = array("red","yellow","blue", "green");
+
+list($red, $blue, $green ) = $colors;
+
+function retrivceUserProfile(){
+	$user[] = "json Gilmore";
+	$user[] = "jason@bai.com";
+	$user[] = "enghlsh";
+	return $user;
+
+}
+list($name, $email, $languge) = retrivceUserProfile();
+echo "name:$name, emile:$email, language:$languge";
 ?>
