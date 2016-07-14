@@ -229,4 +229,195 @@ function retrivceUserProfile(){
 }
 list($name, $email, $languge) = retrivceUserProfile();
 echo "name:$name, emile:$email, language:$languge";
+
+$states = array(0=> "Alabama",1=> "Alaska",2=>"Wyoming");
+
+echo $states[0];
+
+$states1 = array("OH" => "ohio", "PA" => "pennsyvania", "NY" => "New York");
+
+printf("<br/>");
+echo $states1["OH"];
+printf("<br>");
+
+$states2 = array(
+	"Ohio" => array("population" => "11,353,140", "capital" => "Columbus"),
+	"Nebraska" => array("population" => "1,711,263", "captital" => "Omaha")
+	);
+
+echo $states2["Ohio"]["population"];
+
+//php创建一个数组
+$status3["中国"] = "china";
+$status3["美国"] = "Amric";
+$status3["日本"] = "Japan";
+$status3["香港"] = "Hokong";
+$status3["台湾"] = "Tianwan";
+printf("<br/>");
+echo $status3["台湾"];
+echo $status3["香港"];
+
+$languges = array("EN", "CH", "FN", "JAPA", "Dra");
+$languges[0];
+printf("<br/>");
+printf("<br/>");
+printf("<br/>");
+echo $languges[0];
+echo $languges[3];
+
+$languges1 = array(
+	"adf" => "ADF",
+	"AD" => "ad",
+	"ps" => "PS",
+	"ypx" => "尹鹏孝"
+	);
+printf("<br>");
+echo $languges1["ypx"];
+//打开user.txt文件
+/*$users = fopen("users.txt","r");
+
+
+while( $line1 = fgets($users, 8182)){
+	//用explode()分离数据段;
+	list($name, $occupation, $color) = explode("|", $line1);
+
+	//格式化输出
+	printf("name: %s <br />", $name);
+
+	printf("occupation: %s <br />", $occupation);
+
+	printf("Favorate: %s <br />", $color);
+}
+fclose($users);*/
+echo "</br>";
+echo is_array($languges1);
+echo "</br>";
+$die = range(0, 30, 3);
+forEach($die AS $d){
+echo "{$d}<br/>";
+}
+
+
+echo "</br>";
+
+$customers = array();
+$customers[] = array("js", "css", "php");
+$customers[] = array("maya", "ps", "AI");
+$customers[] = array("ypx", "wp", "llg");
+
+forEach($customers AS $customer){
+	vprintf("<p>编成学科: %s<br/> 设计学科: %s <br/> 姓名: %s <br/></p>", $customer);
+
+}
+
+print_r($customers);
+print_r($states2);
+
+print_r($states1);
+print_r($states);
+
+echo("<br/>");
+$s=array("A", "B", "C", "D", "E");
+array_unshift($s,"尹鹏孝");
+print_r($s);
+
+echo "<br/>";
+$ms = array(
+	"ypx" => array("js"),
+ 	"wc" => array("php", "java"), 
+ 	"ljm" => array("maya", "ps"), 
+ 	"wp" => array("扯淡"));
+
+array_unshift($ms,"班长");
+print_r($ms);
+
+$mg = array("good", "well", "yes", "match");
+array_push($mg, "hello,everyone");
+print_r($mg);
+
+//shift删除数组
+$del = array("good", "well");
+array_shift($mg);
+
+echo "<br/>";
+print_r($mg);
+
+
+//从数组末尾删除
+array_pop($del);
+echo "<br/>";
+print_r($del);
+
+
+echo "<br/>";
+$opl = array("del", "pdiv", "dhje", "bv", "lop");
+
+//索搜数组的特殊值
+$br = in_array("1pdiv",$opl);
+printf("{$br}");
+
+$pol["dem"] = 12;
+$pol["nov"] = 11;
+$pol["OcO"] = 10;
+//搜索关联数组的的键
+if(!array_key_exists("OcO", $pol)){
+
+	print_r($pol);
+}else{
+	print_r("none");
+}
+echo "<br/>";
+
+//搜索关联数组的值
+if(array_search(12, $pol)){
+	print_r($pol);
+}else{
+	print_r("09");
+}
+
+echo "<br/>";
+//获取数组的键
+print_r(array_keys($pol));
+
+
+//获取数组的值
+echo "<br/>";
+print_r(array_values($pol));
+
+
+//遍历数组
+//获取当前数组键key($pol)
+echo "<br/>";
+while($key = key($pol)){
+	print_r($key);
+	echo "<br/>";
+	next($pol);
+}
+//获取当前数组值
+$pol1["7"]="ste";
+$pol1["6"]="step";
+$pol1["5"]="may";
+echo "<br/>";
+while($key1 = current($pol1)){
+	print_r($key1);
+	echo "<br/>";
+	next($pol1);
+}
+
+//同一个数组使用了next再次使用时将找不到在哪里所以不执行：如下：
+/*echo "<br/>";
+while($key1 = current($pol)){
+	print_r($key1);
+	echo "<br/>";
+	next($pol);
+}*/
+$pol2 = array("adf" => "ADF",
+	"AD" => "ad",
+	"ps" => "PS",
+	"ypx" => "尹鹏孝")
+//print_r(each($pol2));
+
+
+
 ?>
+
